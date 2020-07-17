@@ -1,0 +1,302 @@
+---- Minecraft Crash Report ----
+// Hi. I'm Minecraft, and I'm a crashaholic.
+
+Time: 17.07.20 10:54
+Description: There was a severe problem during mod loading that has caused the game to fail
+
+cpw.mods.fml.common.LoaderException: java.lang.UnsatisfiedLinkError: C:\.lemoncraft\HuskyBB.dll: Произошел сбой в программе инициализации библиотеки динамической компоновки (DLL)
+	at cpw.mods.fml.common.LoadController.transition(LoadController.java:163)
+	at cpw.mods.fml.common.Loader.initializeMods(Loader.java:741)
+	at cpw.mods.fml.client.FMLClientHandler.finishMinecraftLoading(FMLClientHandler.java:311)
+	at net.minecraft.client.Minecraft.func_71384_a(Minecraft.java:552)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:878)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.k773.GameStarter.newstart(GameStarter.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.k773.GameStarter.start(GameStarter.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.k773.utils.Client.start(Client.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.k773.Start.<init>(Start.java)
+	at Mainclass.main(Mainclass.java:11)
+Caused by: java.lang.UnsatisfiedLinkError: C:\.lemoncraft\HuskyBB.dll: Произошел сбой в программе инициализации библиотеки динамической компоновки (DLL)
+	at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+	at java.lang.ClassLoader.loadLibrary0(Unknown Source)
+	at java.lang.ClassLoader.loadLibrary(Unknown Source)
+	at java.lang.Runtime.load0(Unknown Source)
+	at java.lang.System.load(Unknown Source)
+	at com.denr01.hbb.HuskyBB.init(HuskyBB.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at cpw.mods.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:532)
+	at sun.reflect.GeneratedMethodAccessor84.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:212)
+	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:190)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:119)
+	at cpw.mods.fml.common.Loader.initializeMods(Loader.java:739)
+	... 35 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_261, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 427834472 bytes (408 MB) / 816840704 bytes (779 MB) up to 1056964608 bytes (1008 MB)
+	JVM Flags: 4 total; -Xmx1134M -Xbootclasspath/a:C:\Program Files\Java\jre1.8.0_261\lib\ext\jfxrt.jar -XX:+DisableAttachMechanism -XX:MaxPermSize=128m
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Forge 10.13.4.1614 Optifine OptiFine_1.7.10_HD_U_C1 129 mods loaded, 129 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHI	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHI	FML{7.10.99.99} [Forge Mod Loader] (forge-1.7.10-10.13.4.1614-1.7.10-universal.jar) 
+	UCHI	Forge{10.13.4.1614} [Minecraft Forge] (forge-1.7.10-10.13.4.1614-1.7.10-universal.jar) 
+	UCHI	appliedenergistics2-core{rv3-beta-6} [Applied Energistics 2 Core] (minecraft.jar) 
+	UCHI	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UCHI	itemphysic{1.1.5} [ItemPhysic] (minecraft.jar) 
+	UCHI	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.5.120-nwl.jar) 
+	UCHI	optifinerus{1.7.10} [optifineRus] (optifineRus-1.7.10.jar) 
+	UCHI	ThE-core{1.0.0.1} [Thaumic Energistics Core] (minecraft.jar) 
+	UCHI	ThaumicTinkerer-preloader{0.1} [Thaumic Tinkerer Core] (minecraft.jar) 
+	UCHI	<CoFH ASM>{000} [CoFH ASM] (minecraft.jar) 
+	UCHI	PacketUnlimiter{1.1} [PacketUnlimiter] (minecraft.jar) 
+	UCHI	FastCraft{1.25} [FastCraft] (fastcraft-1.25.jar) 
+	UCHI	ItemBlacklist{1.2.0.8} [ItemBlacklist] (ItemBlacklist-1.7.10-1.2.0.8.jar) 
+	UCHI	bspkrsCore{6.15} [bspkrsCore] ([1.7.10]bspkrsCore-universal-6.15.jar) 
+	UCHI	ArmorStatusHUD{1.28} [ArmorStatusHUD] ([1.7.10]ArmorStatusHUD-client-1.28.jar) 
+	UCHI	StatusEffectHUD{1.27} [StatusEffectHUD] ([1.7.10]StatusEffectHUD-client-1.27.jar) 
+	UCHI	Treecapitator{1.7.10} [Treecapitator] ([1.7.10]Treecapitator-universal-2.0.4.jar) 
+	UCHI	IC2{2.2.827-experimental} [IndustrialCraft 2] (industrialcraft-2-2.2.827-experimental.jar) 
+	UCHI	ImmibisCore{59.1.1} [Immibis Core] (immibis-core-59.1.1.jar) 
+	UCHI	AdvancedMachines{59.0.2} [Advanced Machines] (advanced-machines-59.0.2.jar) 
+	UCHI	AdvancedSolarPanel{1.7.10-3.5.1} [Advanced Solar Panels] (AdvancedSolarPanel-1.7.10-3.5.1.jar) 
+	UCHI	appliedenergistics2{rv3-beta-6} [Applied Energistics 2] (AppliedEnergestics-rv3-beta-6-client.jar) 
+	UCHI	bdlib{1.9.4.109} [BD Lib] (bdlib-1.9.4.109-mc1.7.10.jar) 
+	UCHI	ae2stuff{0.5.1.9} [AE2 Stuff] (ae2stuff-rv3-0.5.1.9-mc1.7.10.jar) 
+	UCHI	AnimationAPI{1.2.4} [AnimationAPI] (AnimationAPI-1.7.10-1.2.4.jar) 
+	UCHI	anticlicker{1.0} [Anti Clicker] (anticlicker.jar) 
+	UCHI	banswapmod{1.0} [Ban Swap Mod] (banswapmod-1.0_client.jar) 
+	UCHI	bCore{0.1} [bCore] (bcore-1.0.jar) 
+	UCHI	betterquesting{3.0.325} [Better Questing] (BetterQuesting-3.0.325%20(2).jar) 
+	UCHI	BetterSignsMod{1.6.4.B} [Better Signs Mod] (BetterSignsMod.jar) 
+	UCHI	hwatcher{1.0} [HuskyWatcher] (HuskyWatcher-1.0-client%20(13).jar) 
+	UCHI	CoFHCore{1.7.10R3.1.3} [CoFH Core] (CoFHCore-[1.7.10]3.1.3-327.jar) 
+	UCHI	Baubles{1.0.1.10} [Baubles] (Baubles-1.7.10-1.0.1.10.jar) 
+	UCHI	ThermalFoundation{1.7.10R1.2.5} [Thermal Foundation] (ThermalFoundation-[1.7.10]1.2.5-115.jar) 
+	UCHI	ThermalExpansion{1.7.10R4.1.4} [Thermal Expansion] (ThermalExpansion-[1.7.10]4.1.4-247.jar) 
+	UCHI	BigReactors{0.4.3A} [Big Reactors] (BigReactors-0.4.3A.jar) 
+	UCHI	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-1.7.10-4.2.3.5.jar) 
+	UCHI	Botania{r1.8-249} [Botania] (Botania-r1.8-249.jar) 
+	UCHI	fdwbotaniaaddon{0.1} [BotaniaAddon] (BotaniaAddon.jar) 
+	UCHI	disablepushermod{1.0.0} [Disable Pusher Mod] (build_libs_disablepushermod-1.0.jar) 
+	UCHI	chisel{2.9.5.11} [Chisel] (Chisel-2.9.5.11.jar) 
+	UCHI	CarpentersBlocks{3.3.8.1} [Carpenter's Blocks] (Carpenters-Blocks-3.3.8.1.jar) 
+	UCHI	ChangeMoney{1.0} [ChangeMoney] (ChangeMoneyMod-1.0.jar) 
+	UCHI	ChargePads{2.8.0} [Charge Pads] (ChargePads-3.0-1.7.10-client%20(2).jar) 
+	UCHI	mystatistics{1.0} [My Statistics] (client.jar) 
+	UCHI	clientwg{1.0} [ClientWG] (ClientWG-1.9%20(2).jar) 
+	UCHI	closeguifixmod{1.0.0} [Close Gui Fix Mod] (closeguifixmod-1.0_client.jar) 
+	UCHI	containerfixmod{1.0.0} [Container Fix Mod] (containerfixmod-1.0_client.jar) 
+	UCHI	CustomMainMenu{1.9.2} [Custom Main Menu] (CustomMainMenu-MC1.7.10-1.9.2.jar) 
+	UCHI	customnpcs{1.7.10d} [CustomNpcs] (CustomNPCs_1.7.10d(21feb16).jar) 
+	UCHI	endercore{1.7.10-0.2.0.39_beta} [EnderCore] (EnderCore-1.7.10-0.2.0.39_beta.jar) 
+	UCHI	customthings{MC1.7.10-0.0.3-55} [CustomThings] (CustomThings-MC1.7.10-0.0.3-55-fixed.jar) 
+	UCHI	DragonsRadioMod{1.7.1} [Dragon's Radio Mod] (Dragon's+Radio+Mod-MC1.7.10-1.7.1.jar) 
+	UCHI	DummyCore{1.13} [DummyCore] (DummyCore1.13.jar) 
+	UCHI	EMT{1.2.6.2} [Electro-Magic Tools] (ElectroMagicTools-1.2.6.2[1.7.10]-client.jar) 
+	UCHI	enchantmentblockmod{1.0} [Enchantment Block Mod] (enchantmentblockmod-1.0_client.jar) 
+	UCHI	Waila{1.5.10} [Waila] (Waila-1.5.10_1.7.10.jar) 
+	UCHI	EnderIO{1.7.10-2.3.0.429_beta} [Ender IO] (EnderIO-1.7.10-2.3.0.429_beta_client.jar) 
+	UCHI	enderportalmod{1.0} [Ender Portal Mod] (EnderPortalMod-1.0.jar) 
+	UCHI	etfuturum{1.5.5} [Et Futurum] (EtFuturum-1.5.5-cv1.jar) 
+	UCHI	fireworkfixmod{1.0.0} [Firework Fix Mod] (fireworkfixmod-1.0.jar) 
+	UCHI	ThaumicTinkerer{unspecified} [Thaumic Tinkerer] (ThaumicTinkerer-2.5-1.7.10-538.jar) 
+	UCHI	ForbiddenMagic{1.7.10-0.575} [Forbidden Magic] (Forbidden%20Magic-1.7.10-0.575.jar) 
+	UCHI	Forestry{4.2.14.62} [Forestry for Minecraft] (forestry_1.7.10-4.2.14.62-cv1.jar) 
+	UCHI	Genomica{1.0} [Genomica] (GenomicaMod-1.0.jar) 
+	UCHI	GraviSuite{1.7.10-2.0.3} [Graviation Suite] (GraviSuite-client-2.0.3%20(2).jar) 
+	UCHI	GraviSuiteReloaded{1.7.10-0.9.1} [GraviSuiteReloaded] (GraviSuite_Reloaded-1.7.10-0.9.1.jar) 
+	UCHI	guimouseblock{1.0.0} [Gui Mouse Block] (guimouseblock-1.0_client.jar) 
+	UCHI	hauth{1.0.0} [HuskyAuth] (H2FA-1.0-client4-obf2.jar) 
+	UCHI	hivefixmod{1.0} [Hive Fix Mod] (hivefixmod-1_0.jar) 
+	UCHE	HuskyBB{1.0} [HuskyBB] (HuskyBB-1.0.jar) 
+	UCHI	huskychest{1.0} [HuskyChest] (HuskyChest-client-obf2.jar) 
+	UCHI	hh{1.0} [HuskyHelper] (HuskyHelper-v26.jar) 
+	UCHI	IC2NuclearControl{2.4.3a} [Nuclear Control 2] (IC2NuclearControl-2.4.3a.jar) 
+	UCHI	ImmersiveEngineering{0.7.7} [Immersive Engineering] (ImmersiveEngineering-0.7.7-client.jar) 
+	UCHI	immersiveintegration{0.6.8} [Immersive Integration] (immersiveintegration-0.6.8.jar) 
+	UCHI	ImprovemedSaber{1.7.10-1.1.1-release} [ImprovemedSaber] (ImrovemedSable-client-8.jar) 
+	UCHI	SolarLib{1.1} [Solar Lib] (SolarLib-1.1.jar) 
+	UCHI	xModSolarPanel{1.7.10-1.0.0} [IntegratedSolarPanels] (IntegratedSolarPanels-1.7.10-1.0.jar) 
+	UCHI	inventorytweaks{1.59-dev-152-cf6e263} [Inventory Tweaks] (InventoryTweaks-1.59-dev-152.jar) 
+	UCHI	IronChest{6.0.62.742} [Iron Chest] (ironchest-1.7.10-6.0.62.742-universal.jar) 
+	UCHI	ItemCommands{1.0} [ItemCommands] (ItemCommandsMod-1.0.jar) 
+	UCHI	killerhud{${version}} [KillerHUD] (killerhud-1.7.10-0.1.jar) 
+	UCHI	MadMessages{1.0} [MadMessages] (MadMessages-1.0.jar) 
+	UCHI	Mantle{1.7.10-0.3.2.jenkins191} [Mantle] (Mantle-1.7.10-0.3.2b.jar) 
+	UCHI	TConstruct{1.7.10-1.8.8.build988} [Tinkers' Construct] (TConstruct-1.7.10-1.8.8.jar) 
+	UCHI	MagicBees{2.4.4} [Magic Bees] (magicbees-1.7.10-2.4.4.jar) 
+	UCHI	tcmatrix{0.1} [ThaumCraftAddon] (MatrixSpeed.jar) 
+	UCHI	minetuner{1.7.10-1.2} [MineTuner] (MineTuner-1.7.10-1.2.jar) 
+	UCHI	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-1.7.10-3.0.10.jar) 
+	UCHI	modtweaker2{0.9.6} [Mod Tweaker 2] (ModTweaker2-0.9.6.jar) 
+	UCHI	NamePlates{1.0} [NamePlates] (nameplates-client.jar) 
+	UCHI	NEIAddons{1.12.14.40} [NEI Addons] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHI	NEIAddons|Developer{1.12.14.40} [NEI Addons: Developer Tools] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHI	NEIAddons|AppEng{1.12.14.40} [NEI Addons: Applied Energistics 2] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHI	NEIAddons|Botany{1.12.14.40} [NEI Addons: Botany] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHI	NEIAddons|Forestry{1.12.14.40} [NEI Addons: Forestry] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHI	NEIAddons|CraftingTables{1.12.14.40} [NEI Addons: Crafting Tables] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHI	NEIAddons|ExNihilo{1.12.14.40} [NEI Addons: Ex Nihilo] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UCHI	epf{1.0} [EndPortalFix] (NeiserPortalFix-1.7.10-1.0-obf2.jar) 
+	UCHI	pvpprotector{1.0} [PVP Player Protector] (NoobProtector-client.jar) 
+	UCHI	octoshop-client{1.0} [octoshop-client] (octo-shop-v2.2-client%20(2).jar) 
+	UCHI	gui-mod{1.0} [gui-mod] (octo-shop-v2.2-client%20(2).jar) 
+	UCHI	rabbit-gui{v1.3.0} [Rabbit Gui Library] (octo-shop-v2.2-client%20(2).jar) 
+	UCHI	pets{1.0} [Pets] (pets-client(12).jar) 
+	UCHI	PlayerLeveling{1.0} [PlayerLeveling] (PlayerLeveling-1.0.jar) 
+	UCHI	ResourceLoader{1.3} [Resource Loader] (ResourceLoader-MC1.7.10-1.3.jar) 
+	UCHI	ShowMoney{1.0} [ShowMoney] (ShowMoneyMod-1.0.jar) 
+	UCHI	SkinPatcher{0.1} [SkinPatcher by K773] (skinfixer.zip) 
+	UCHI	supersolarpanel{1.7.10-1.1.1-release} [Super Solar Panel] (SSP.jar) 
+	UCHI	stackchangemod{1.0} [Stack Change Mod] (stackchangemod-1.0_client.jar) 
+	UCHI	bq_standard{3.0.179} [Standard Expansion] (StandardExpansion-3.0.179%20(1).jar) 
+	UCHI	TaintedMagic{r7.82} [Tainted Magic] (TaintedMagic-r7.82-client.jar) 
+	UCHI	tcinventoryscan{1.0.11} [TC Inventory Scanning] (tcinventoryscan-mc1.7.10-1.0.11.jar) 
+	UCHI	thaumcraftaddon{1.0} [ThaumCraftAddon] (ThaumcraftAddon-1.0.jar) 
+	UCHI	thaumcraftneiplugin{@VERSION@} [Thaumcraft NEI Plugin] (thaumcraftneiplugin-1.7.10-1.7a.jar) 
+	UCHI	thaumicbases{1.3.1710.2} [ThaumicBases] (ThaumicBases-1.3.1710.4.jar) 
+	UCHI	thaumicenergistics{1.0.0.5} [Thaumic Energistics] (thaumicenergistics-1.0.0.5.jar) 
+	UCHI	ThaumicHorizons{1.1.9} [Thaumic Horizons] (thaumichorizons-1.7.10-1.1.9.jar) 
+	UCHI	ThermalDynamics{1.7.10R1.2.0} [Thermal Dynamics] (ThermalDynamics-[1.7.10]1.2.0-171.jar) 
+	UCHI	SolarSynthesis{1.0.3} [The Solar Synthesis] (TheSolarSynthesis-1.0.3-protected.jar) 
+	UCHI	trademe{0.2} [Trade Me] (TradeMe-1.7.10-0.1-client.jar) 
+	UCHI	TravellersGear{1.16.6} [Traveller's Gear] (TravellersGear-1.7.10-1.16.6.jar) 
+	UCHI	vending{1.2.3} [vending] (vending-1.2.3.jar) 
+	UCHI	witherdeathmod{1.0} [Wither Death Mod] (WitherDeathMod-1.0.jar) 
+	UCHI	worldedit-cui{1.0} [WorldEdit Client User Interface] (WorldEditCUI-1.7.10-1.0.0.jar) 
+	UCHI	WrenchBlocker{1.0} [WrenchBlocker] (WrenchBlocker-1.0.jar) 
+	UCHI	xaerominimap{1.16.9} [Xaero's Minimap] (XaerosMinimap-1.16.9_hider.jar) 
+	GL info: ' Vendor: 'Intel' Version: '4.5.0 - Build 24.20.100.6286' Renderer: 'Intel(R) HD Graphics 620'
+	AE2 Version: beta rv3-beta-6 for Forge 10.13.4.1448
+	CoFHCore: -[1.7.10]3.1.3-327
+	ThermalFoundation: -[1.7.10]1.2.5-115
+	ThermalExpansion: -[1.7.10]4.1.4-247
+	Mantle Environment: DO NOT REPORT THIS CRASH! Unsupported mods in environment: optifine
+	TConstruct Environment: Environment healthy.
+	ThermalDynamics: -[1.7.10]1.2.0-171
+	List of loaded APIs: 
+		* appliedenergistics2|API (rv2) from ThaumicTinkerer-2.5-1.7.10-538.jar
+		* Baubles|API (1.0.1.10) from Baubles-1.7.10-1.0.1.10.jar
+		* BetterQuesting|API (3.2) from BetterQuesting-3.0.325%20(2).jar
+		* BetterQuesting|API2 (3.1) from BetterQuesting-3.0.325%20(2).jar
+		* BotaniaAPI (76) from Botania-r1.8-249.jar
+		* CarpentersBlocks|API (3.3.7) from Carpenters-Blocks-3.3.8.1.jar
+		* ChiselAPI (0.1.1) from Chisel-2.9.5.11.jar
+		* ChiselAPI|Carving (0.1.1) from Chisel-2.9.5.11.jar
+		* ChiselAPI|Rendering (0.1.1) from Chisel-2.9.5.11.jar
+		* CoFHAPI (1.7.10R1.0.13) from EnderIO-1.7.10-2.3.0.429_beta_client.jar
+		* CoFHAPI|block (1.7.10R1.0.13) from EnderIO-1.7.10-2.3.0.429_beta_client.jar
+		* CoFHAPI|core (1.7.10R1.3.1) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHAPI|energy (1.7.10R1.3.1) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHAPI|fluid (1.7.10R1.3.1) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHAPI|inventory (1.7.10R1.3.1) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHAPI|item (1.7.10R1.3.1) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHAPI|modhelpers (1.7.10R1.3.1) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHAPI|tileentity (1.7.10R1.0.13) from EnderIO-1.7.10-2.3.0.429_beta_client.jar
+		* CoFHAPI|transport (1.7.10R1.0.13) from EnderCore-1.7.10-0.2.0.39_beta.jar
+		* CoFHAPI|world (1.7.10R1.3.1) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHLib (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHLib|audio (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHLib|gui (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHLib|gui|container (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHLib|gui|element (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHLib|gui|element|listbox (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHLib|gui|slot (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHLib|inventory (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHLib|render (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHLib|render|particle (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHLib|util (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHLib|util|helpers (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHLib|util|position (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHLib|world (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* CoFHLib|world|feature (1.7.10R1.1.2) from CoFHCore-[1.7.10]3.1.3-327.jar
+		* EnderIOAPI (0.0.2) from EnderIO-1.7.10-2.3.0.429_beta_client.jar
+		* EnderIOAPI|Redstone (0.0.2) from EnderIO-1.7.10-2.3.0.429_beta_client.jar
+		* EnderIOAPI|Teleport (0.0.2) from EnderIO-1.7.10-2.3.0.429_beta_client.jar
+		* EnderIOAPI|Tools (0.0.2) from EnderIO-1.7.10-2.3.0.429_beta_client.jar
+		* ForestryAPI|apiculture (4.8.0) from forestry_1.7.10-4.2.14.62-cv1.jar
+		* ForestryAPI|arboriculture (4.2.1) from forestry_1.7.10-4.2.14.62-cv1.jar
+		* ForestryAPI|circuits (3.1.0) from forestry_1.7.10-4.2.14.62-cv1.jar
+		* ForestryAPI|core (5.0.0) from forestry_1.7.10-4.2.14.62-cv1.jar
+		* ForestryAPI|farming (2.1.0) from forestry_1.7.10-4.2.14.62-cv1.jar
+		* ForestryAPI|food (1.1.0) from forestry_1.7.10-4.2.14.62-cv1.jar
+		* ForestryAPI|fuels (2.0.1) from forestry_1.7.10-4.2.14.62-cv1.jar
+		* ForestryAPI|genetics (4.7.1) from forestry_1.7.10-4.2.14.62-cv1.jar
+		* ForestryAPI|hives (4.1.0) from forestry_1.7.10-4.2.14.62-cv1.jar
+		* ForestryAPI|lepidopterology (1.3.0) from forestry_1.7.10-4.2.14.62-cv1.jar
+		* ForestryAPI|mail (3.0.0) from forestry_1.7.10-4.2.14.62-cv1.jar
+		* ForestryAPI|multiblock (3.0.0) from forestry_1.7.10-4.2.14.62-cv1.jar
+		* ForestryAPI|recipes (5.4.0) from forestry_1.7.10-4.2.14.62-cv1.jar
+		* ForestryAPI|storage (3.0.0) from forestry_1.7.10-4.2.14.62-cv1.jar
+		* ForestryAPI|world (2.1.0) from forestry_1.7.10-4.2.14.62-cv1.jar
+		* IC2API (1.0) from industrialcraft-2-2.2.827-experimental.jar
+		* ImmersiveEngineering|API (1.0) from ImmersiveEngineering-0.7.7-client.jar
+		* NuclearControlAPI (v1.0.5) from IC2NuclearControl-2.4.3a.jar
+		* RailcraftAPI|crafting (1.0.0) from ImmersiveEngineering-0.7.7-client.jar
+		* Thaumcraft|API (4.2.2.0) from Thaumcraft-1.7.10-4.2.3.5.jar
+		* thaumicenergistics|API (1.1) from thaumicenergistics-1.0.0.5.jar
+		* TravellersGear|API (1.0) from TravellersGear-1.7.10-1.16.6.jar
+		* WailaAPI (1.2) from Waila-1.5.10_1.7.10.jar
+	Chisel: Errors like "[FML]: Unable to lookup ..." are NOT the cause of this crash. You can safely ignore these errors. And update forge while you're at it.
+	EnderIO: Found the following problem(s) with your installation:
+                  * Optifine is installed. This is NOT supported.
+                 This may have caused the error. Try reproducing the crash WITHOUT this/these mod(s) before reporting it.
+	Forestry : Warning: You have mods that change the behavior of Minecraft, ForgeModLoader, and/or Minecraft Forge to your client: 
+Optifine
+These may have caused this error, and may not be supported. Try reproducing the crash WITHOUT these mods, and report it then.
